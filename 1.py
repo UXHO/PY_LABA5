@@ -21,10 +21,10 @@ def get_computer_move(st):
 stones = random.randint(4, 30)
 print(f"Начальное кол-во камней: {stones}")
 
-while stones > 0:
+while stones > 1:
     user_move = get_user_move()
     stones -= user_move
-    if stones <= 0:
+    if stones <= 1:
         print("Вы одержали победу!")
         break
     print(f"Осталось камней: {stones}")
@@ -32,7 +32,7 @@ while stones > 0:
     computer_move = get_computer_move(stones)
     print(f"Компьютер берет {computer_move} камня(ей).")
     stones -= computer_move
-    if stones <= 0:
+    if stones <= 1:
         print("Компьютер одержал победу!")
         break
     print(f"Осталось камней: {stones}")
